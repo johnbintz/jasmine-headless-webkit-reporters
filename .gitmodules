@@ -1,0 +1,3 @@
+[submodule "vendor/assets/javascripts/jasmine-reporters"]
+	path = vendor/assets/javascripts/jasmine-reporters
+	url = git://github.com/larrymyers/jasmine-reporters.git
