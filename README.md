@@ -1,29 +1,22 @@
-# Jasmine::Headless::Webkit::Reporters
+Reporters for use with `jasmine-headless-webkit`. Just wraps up the original reporter in a way that JHW can use them!
 
-TODO: Write a gem description
+Reporters included:
 
-## Installation
+From [jasmine-reporters](https://github.com/larrymyers/jasmine-reporters):
 
-Add this line to your application's Gemfile:
+* JUnit
+* Teamcity
 
-    gem 'jasmine-headless-webkit-reporters'
+Use them like so:
 
-And then execute:
+`jasmine-headless-webkit -f Console -f JUnit:junit.xml -f Teamcity:teamcity.txt`
 
-    $ bundle
+Make sure `jasmine-headless-webkit` can find the reporters:
 
-Or install it yourself as:
+``` ruby
+# Gemfile
 
-    $ gem install jasmine-headless-webkit-reporters
+gem 'jasmine-headless-webkit'
+gem 'jasmine-headless-webkit-reporters'
+```
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
