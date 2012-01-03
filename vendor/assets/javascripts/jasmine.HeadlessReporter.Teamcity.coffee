@@ -6,3 +6,15 @@ class jasmine.HeadlessReporter.Teamcity extends jasmine.TeamcityReporter
   log: (text) =>
     JHW.print(@outputTarget, text + "\n")
 
+  reportSpecResults: (spec) =>
+    JHW.ping()
+    super(spec)
+
+  reportRunnerResults: (runner) =>
+    super(runner)
+
+    JHW.finishSuite()
+
+    if window.JHW
+      window.onbeforeunload = null
+

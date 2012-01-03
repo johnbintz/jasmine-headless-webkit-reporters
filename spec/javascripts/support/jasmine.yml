@@ -1,0 +1,9 @@
+src_dir: 'src'
+spec_dir: 'spec/javascripts'
+
+src_files:
+- "*.js"
+
+spec_files:
+- "*_spec.*{js,coffee}"
+

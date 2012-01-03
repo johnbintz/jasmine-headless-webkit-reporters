@@ -6,3 +6,15 @@ class jasmine.HeadlessReporter.JUnit extends jasmine.JUnitXmlReporter
   writeFile: (filename, text) =>
     JHW.print(@outputTarget, text)
 
+  reportSpecResults: (spec) =>
+    JHW.ping()
+    super(spec)
+
+  reportRunnerResults: (runner) =>
+    super(runner)
+
+    JHW.finishSuite()
+
+    if window.JHW
+      window.onbeforeunload = null
+
