@@ -17,6 +17,6 @@ Make sure `jasmine-headless-webkit` can find the reporters:
 # Gemfile
 
 gem 'jasmine-headless-webkit'
-gem 'jasmine-headless-webkit-reporters'
+gem 'jasmine-headless-webkit-reporters', git: 'git@github.com:johnbintz/jasmine-headless-webkit-reporters.git', submodules:true
 ```
 
